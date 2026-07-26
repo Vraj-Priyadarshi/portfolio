@@ -8,21 +8,21 @@ const skillsData = [
       { label: "NumPy", img: "/assets/skills/icons8-numpy.svg" },
       { label: "Pandas", img: "/assets/skills/icons8-pandas.svg" },
       { label: "Matplotlib", img: "/assets/skills/icons8-matplotlib.svg" },
-      { label: "Seaborn", img: "/assets/skills/seaborn-2.png" },
+      { label: "Seaborn", img: "/assets/skills/seaborn-2.webp" },
       { label: "Scikit-learn", img: "/assets/skills/scikit-learn.svg" },
       { label: "TensorFlow", img: "/assets/skills/tensorflow-tf.svg" },
       { label: "PyTorch", img: "/assets/skills/pytorch.svg" },
       { label: "Keras", img: "/assets/skills/keras.svg" },
-      { label: "Transformers", img: "/assets/skills/transformer.png" },
-      { label: "Sentence-Transformers", img: "/assets/skills/transformer.png" },
+      { label: "Transformers", img: "/assets/skills/transformer.webp" },
+      { label: "Sentence-Transformers", img: "/assets/skills/transformer.webp" },
       { label: "LangChain", img: "/assets/skills/langchain-color.svg" },
       { label: "LangGraph", img: "/assets/skills/langgraph-color.svg" },
       { label: "LangSmith", img: "/assets/skills/langsmith-color.svg" },
       { label: "Ollama", img: "/assets/skills/ollama.svg" },
       { label: "RAG", img: "/assets/skills/Rag--Streamline-Carbon.svg" },
-      { label: "Prompt Engineering", img: "/assets/skills/prompt_enginnering.png" },
+      { label: "Prompt Engineering", img: "/assets/skills/prompt_enginnering.webp" },
       { label: "Agent Orchestration", img: "/assets/skills/agent_orchestration.svg" },
-      { label: "Multi-Agent Systems", img: "/assets/skills/multiagent.png" },
+      { label: "Multi-Agent Systems", img: "/assets/skills/multiagent.webp" },
       { label: "LLM Evaluation", img: "/assets/skills/llm-text.svg" },
       { label: "Agent Benchmarking", img: "" },
       { label: "Agent Observability", img: "" }
@@ -35,7 +35,7 @@ const skillsData = [
       { label: "Node.js", img: "/assets/skills/icons8-nodejs.svg" },
       { label: "Express.js", img: "/assets/skills/icons8-express-js.svg" },
       { label: "Bootstrap", img: "/assets/skills/icons8-bootstrap.svg" },
-      { label: "REST APIs", img: "/assets/skills/Rest-API_logo.png" },
+      { label: "REST APIs", img: "/assets/skills/Rest-API_logo.webp" },
       { label: "FastAPI", img: "/assets/skills/FastAPI.svg" },
       { label: "Streamlit", img: "/assets/skills/Streamlit.svg" },
       { label: "Uvicorn", img: "/assets/skills/uvicorn.svg" }
@@ -115,7 +115,7 @@ function Skills() {
         <h3 className="mono-readout">GROUP ▸ {currentGroup.title.toUpperCase()}</h3>
         <div className="skill-icons">
           {currentGroup.icons.map((skill, idx) => (
-            <div key={idx} className="skill-card hud-panel" tabIndex={0}>
+            <div key={`${activeTab}-${idx}`} className="skill-card hud-panel" tabIndex={0} style={{ animationDelay: `${idx * 0.05}s` }}>
               <span className="hud-bracket tl"></span>
               <span className="hud-bracket tr"></span>
               <span className="hud-bracket bl"></span>
@@ -132,6 +132,13 @@ function Skills() {
                 />
               )}
               <span className="skill-name">{skill.label}</span>
+              <div className="proficiency-bar" title="Proficiency Level">
+                <div className="prof-fill"></div>
+                <div className="prof-fill"></div>
+                <div className="prof-fill"></div>
+                <div className="prof-fill"></div>
+                <div className="prof-empty"></div>
+              </div>
             </div>
           ))}
         </div>

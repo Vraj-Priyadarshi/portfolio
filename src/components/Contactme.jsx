@@ -41,6 +41,11 @@ function Contact() {
       if (response.ok) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
+        
+        // Hide the success message after 6 seconds
+        setTimeout(() => {
+          setStatus("");
+        }, 6000);
       } else {
         setStatus("error");
       }
@@ -134,7 +139,11 @@ function Contact() {
           </button>
 
           {status === "success" && (
-            <p className="status-msg success mono-readout">✓ [ SIGNAL_TRANSMITTED_SUCCESSFULLY ]</p>
+            <div className="terminal-success-message mono-readout">
+              <div className="typewriter-line1">&gt; TRANSMISSION SUCCESSFUL</div>
+              <div className="typewriter-line2">&gt; AWAITING RESPONSE...</div>
+              <div className="scanline"></div>
+            </div>
           )}
           {status === "success-mailto" && (
             <p className="status-msg info mono-readout">✓ [ REDIRECTING_TO_OUTBOUND_MAIL_CLIENT ]</p>

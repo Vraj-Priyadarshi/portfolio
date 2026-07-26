@@ -1,7 +1,7 @@
 // src/About.jsx
 import React from "react";
 import "./About.css";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaChevronDown, FaGraduationCap, FaUniversity } from "react-icons/fa";
 
 function About() {
   return (
@@ -15,7 +15,7 @@ function About() {
             <div className="scanning-ring"></div>
             <div className="profile-pic hud-hexagon">
               <img
-                src="/profile_photo.jpeg"
+                src="/profile_photo.webp"
                 alt="Vraj Priyadarshi"
               />
             </div>
@@ -63,10 +63,10 @@ function About() {
               
               <h3 className="glow-text">Education</h3>
               <p>
-                <strong>B.Tech in Computer Engineering</strong><br/>
-                Pandit Deendayal Energy University (PDEU)<br/>
-                <span className="duration-text">Aug 2023 - Jul 2027</span><br/>
-                CGPA: 9.53 (till 6th semester)
+                <strong><FaGraduationCap style={{marginRight: '8px', color: 'var(--color-accent-cyan)'}}/>B.Tech in Computer Engineering</strong><br/>
+                <FaUniversity style={{marginRight: '8px', color: 'var(--color-accent-purple)'}}/>Pandit Deendayal Energy University (PDEU)<br/>
+                <span className="duration-text" style={{marginLeft: '24px'}}>Aug 2023 - Jul 2027</span><br/>
+                <span style={{marginLeft: '24px'}}>CGPA: 9.53 (till 6th semester)</span>
               </p>
             </div>
 
@@ -93,6 +93,10 @@ function About() {
         <q>
           Code is like humor. When you have to explain it, it’s bad. – Cory House
         </q>
+      </div>
+      
+      <div className="scroll-indicator">
+        <FaChevronDown className="bounce-chevron" />
       </div>
     </section>
   );

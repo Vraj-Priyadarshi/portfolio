@@ -11,10 +11,10 @@ function Experience() {
   };
 
   const images = [
-    { src: "/accenture1.jpeg", alt: "Accenture Office" },
-    { src: "/accenture2.jpeg", alt: "Team Presentation" },
-    { src: "/accenture3.jpeg", alt: "Workplace" },
-    { src: "/accenture4.jpeg", alt: "Certificates" }
+    { src: "/accenture1.webp", alt: "Accenture Office" },
+    { src: "/accenture2.webp", alt: "Team Presentation" },
+    { src: "/accenture3.webp", alt: "Workplace" },
+    { src: "/accenture4.webp", alt: "Certificates" }
   ];
 
   return (
@@ -26,6 +26,7 @@ function Experience() {
       </div>
 
       <div className="case-study-card hud-panel">
+        <div className="timeline-pulse-dot"></div>
         <span className="hud-bracket tl"></span>
         <span className="hud-bracket tr"></span>
         <span className="hud-bracket bl"></span>
@@ -67,27 +68,27 @@ function Experience() {
             <button className="expandable-trigger mono-readout" onClick={() => toggleSection('built')}>
               [ {expandedSection === 'built' ? '-' : '+'} ] WHAT I BUILT
             </button>
-            {expandedSection === 'built' && (
+            <div className="expandable-content-wrapper">
               <div className="expandable-content">
                 <p><strong>AgentForge:</strong> A comprehensive platform for multi-agent workflows.</p>
                 <p><strong>Local Judge Bias Lab (LJBL):</strong> A framework to identify and quantify bias in LLM-as-a-Judge evaluations.</p>
                 <p><strong>AgentArena:</strong> A benchmarking suite for different agent architectures.</p>
                 <p><strong>TAP & AWI:</strong> Research frameworks for task predictability and workflow intelligence.</p>
               </div>
-            )}
+            </div>
           </div>
 
           <div className={`expandable-section ${expandedSection === 'learnings' ? 'active' : ''}`}>
             <button className="expandable-trigger mono-readout" onClick={() => toggleSection('learnings')}>
               [ {expandedSection === 'learnings' ? '-' : '+'} ] KEY LEARNINGS
             </button>
-            {expandedSection === 'learnings' && (
+            <div className="expandable-content-wrapper">
               <div className="expandable-content">
                 <p>Identified LLM-as-a-Judge bias patterns, specifically same-model vs cross-model biases.</p>
                 <p>Gained deep insights into agent evaluation methodology design.</p>
                 <p>Learned how to lead a team through a complex research-driven engineering project.</p>
               </div>
-            )}
+            </div>
           </div>
         </div>
 

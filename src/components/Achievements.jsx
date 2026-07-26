@@ -1,5 +1,5 @@
-import React from "react";
-import { FaTrophy, FaMedal, FaCode, FaExternalLinkAlt } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaTrophy, FaMedal, FaCode, FaExternalLinkAlt, FaTimes, FaSearchPlus } from "react-icons/fa";
 import "./Achievements.css";
 
 const hackathons = [
@@ -8,7 +8,7 @@ const hackathons = [
     event: "Breach 2026 FinTech Hackathon",
     details: "Won first prize among 700+ participants for building a functional multi-page EV vehicle rental system and charging network dashboard.",
     icon: <FaTrophy className="gold-trophy" />,
-    images: ["/breach_1.png", "/breach_2.png"]
+    images: ["/breach_1.webp", "/breach_2.webp"]
   },
   {
     title: "Top 10 Finish",
@@ -35,6 +35,8 @@ const otherAchievements = [
 ];
 
 function Achievements() {
+  const [lightboxImg, setLightboxImg] = useState(null);
+
   return (
     <section id="achievements" className="achievements-section">
 
@@ -66,8 +68,9 @@ function Achievements() {
               {hack.images && (
                 <div className="hackathon-gallery">
                   {hack.images.map((img, i) => (
-                    <div key={i} className="hackathon-img-wrapper hud-hexagon">
+                    <div key={i} className="hackathon-img-wrapper hud-hexagon" onClick={() => setLightboxImg(img)} style={{cursor: 'pointer'}}>
                       <img src={img} alt={`${hack.event} snapshot ${i + 1}`} data-replace="hackathon-photo" />
+                      <div className="hover-overlay"><FaSearchPlus /></div>
                     </div>
                   ))}
                 </div>
@@ -102,6 +105,21 @@ function Achievements() {
           ))}
         </div>
       </div>
+
+      {lightboxImg && (
+        <div className="lightbox-modal fade-in" onClick={() => setLightboxImg(null)}>
+          <div className="lightbox-content hud-panel" onClick={(e) => e.stopPropagation()}>
+            <span className="hud-bracket tl"></span>
+            <span className="hud-bracket tr"></span>
+            <span className="hud-bracket bl"></span>
+            <span className="hud-bracket br"></span>
+            <button className="close-lightbox" aria-label="Close lightbox" onClick={() => setLightboxImg(null)}>
+              <FaTimes />
+            </button>
+            <img src={lightboxImg} alt="Enlarged view" />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

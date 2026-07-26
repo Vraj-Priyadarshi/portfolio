@@ -91,10 +91,17 @@
   box-shadow: 0 0 8px var(--color-accent-cyan);
 }
 
-.navele:hover,
+.navele:hover {
+  color: var(--color-accent-cyan);
+  text-shadow: 0 0 5px var(--color-accent-cyan);
+}
+
 .navele.active {
   color: var(--color-accent-cyan);
-  text-shadow: 0 0 8px rgba(0, 240, 255, 0.55);
+  text-shadow: 0 0 8px var(--color-accent-cyan);
+  border-bottom: 2px solid var(--color-accent-cyan);
+  box-shadow: 0 4px 6px -4px var(--color-accent-cyan);
+  padding-bottom: 2px;
 }
 
 .navele:hover::after,

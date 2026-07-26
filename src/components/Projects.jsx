@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaGithub, FaExternalLinkAlt, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaTimes, FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
 import "./Projects.css";
 
 const pythonGames = [
@@ -43,7 +43,7 @@ const projectsData = [
     tech: ["Python", "LangChain", "Streamlit", "Ollama"],
     github: "https://github.com/Vraj-Priyadarshi/AgentForge",
     updated: "July 2026",
-    images: ["/agentforge_Dashboard.png", "/agentforge2_dashboard.png", "/agentforge_workflow_details.png", "/buildAgent.png", "/multiagent_workflow_agentforge.png"],
+    images: ["/agentforge_Dashboard.webp", "/agentforge2_dashboard.webp", "/agentforge_workflow_details.webp", "/buildAgent.webp", "/multiagent_workflow_agentforge.webp"],
     features: [
       "Pluggable adapters for 9+ providers",
       "Offline local evaluation loops via Ollama",
@@ -58,7 +58,7 @@ const projectsData = [
     tech: ["FastAPI", "PostgreSQL", "LangGraph", "React", "TypeScript", "SQLAlchemy"],
     github: "https://github.com/Vraj-Priyadarshi/spec2code-ai",
     updated: "July 2026",
-    images: ["/spec2code_homepage.png", "/spec2code_working.png", "/spec2code_output.png"],
+    images: ["/spec2code_homepage.webp", "/spec2code_working.webp", "/spec2code_output.webp"],
     features: [
       "6-agent LangGraph DAG workflow",
       "Real-time SSE streaming of execution states",
@@ -73,7 +73,7 @@ const projectsData = [
     tech: ["Python", "FastAPI", "Streamlit", "SBERT", "FAISS"],
     github: "https://github.com/Vraj-Priyadarshi/nlp_project",
     updated: "March 2026",
-    images: ["/semsim1.png", "/semsim2.png"],
+    images: ["/semsim1.webp", "/semsim2.webp"],
     features: [
       "Two-stage SBERT and FAISS retrieval",
       "90% question duplicate detection accuracy",
@@ -270,11 +270,11 @@ function Projects() {
                   <ImageCarousel images={p.images} placeholder={p.placeholder} />
                   <div className="hero-hover-actions">
                     <a href={p.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                      <FaGithub /> GitHub
+                      <FaGithub /> GitHub <FaArrowRight className="btn-arrow" />
                     </a>
                     {p.live && (
                       <a href={p.live} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                        <FaExternalLinkAlt /> Live Demo
+                        <FaExternalLinkAlt /> Live Demo <FaArrowRight className="btn-arrow" />
                       </a>
                     )}
                   </div>
@@ -306,11 +306,11 @@ function Projects() {
                 {isExpanded && p.github && (!isShowcase || !hasImages) && (
                   <div className="project-links" onClick={(e) => e.stopPropagation()}>
                     <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label="View Repository on GitHub">
-                      <FaGithub /> Source Code
+                      <FaGithub /> Source Code <FaArrowRight className="btn-arrow" />
                     </a>
                     {p.live && (
                       <a href={p.live} target="_blank" rel="noopener noreferrer" aria-label="View Live Website">
-                        <FaExternalLinkAlt /> Live Demo
+                        <FaExternalLinkAlt /> Live Demo <FaArrowRight className="btn-arrow" />
                       </a>
                     )}
                   </div>
