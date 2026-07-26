@@ -1,0 +1,59 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.loading-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.loading-text {
+  color: cyan;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 8px cyan;
+  animation: pulse 1.5s infinite;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: cyan;
+  width: 0%;
+  transition: width 0.3s ease;
+  border-radius: 0 5px 5px 0;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}

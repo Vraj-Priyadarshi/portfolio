@@ -1,0 +1,3 @@
+Note: Place your actual resume PDF here.
+Name the file: Vraj_Priyadarshi_Resume.pdf
+So it resolves to: /assets/resume/Vraj_Priyadarshi_Resume.pdf
