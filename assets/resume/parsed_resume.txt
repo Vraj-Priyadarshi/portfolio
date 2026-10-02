@@ -1,0 +1,49 @@
+Vraj Priyadarshi
++91 9313014480 | vrajpriyadarshi2004@gmail.com | Portfolio | LinkedIn | GitHub
+
+Education
+Pandit Deendayal Energy University (PDEU) | August 2023 - July 2027
+B.Tech in Computer Engineering — CGPA: 9.53 | Gujarat, India
+
+Experience
+Accenture | May 2026 – July 2026
+Associate Software Engineering Intern | Bengaluru, India
+– Designed and built an Agent Evaluation Framework benchmarking multiple agent architectures with standardized datasets, evaluation pipelines, and 10+ quantitative metrics.
+– Built AgentArena, a platform comparing Simple Chain, ReAct, Plan-and-Execute, and Multi-Agent architectures across benchmark tasks and evaluation dimensions.
+– Implemented LLM-as-a-Judge, trajectory evaluation, tool-selection assessment, and agent reliability analysis methodologies for automated agent scoring.
+
+Skills
+Languages: Python, JavaScript, Java, C, C++, HTML, CSS
+Frameworks/Libraries: React, Node.js, Express.js, Bootstrap, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, PyTorch, Transformers, Sentence-Transformers
+Backend & Deployment: FastAPI, Streamlit, Uvicorn, REST APIs, PostgreSQL, MongoDB, Docker
+AI/Agentic Concepts: LangChain, LangGraph, LangSmith, CrewAI, n8n, Ollama, RAG, Advanced RAG, Agentic RAG, Corrective RAG (CRAG), Self-RAG, RAG Fusion, HyDE, Graph RAG, Hybrid Search, Re-Ranking, RAGAS, Vector Databases, Prompt Engineering, Agent Orchestration, Multi-Agent Systems, LLM Evaluation, Agent Benchmarking, AI Evaluation Frameworks, Agent Observability
+MLOps: MLflow, DVC, Model Deployment, Model Monitoring, CI/CD for Machine Learning
+Developer Tools: Git, GitHub, VS Code
+Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Software Engineering, Artificial Intelligence
+
+Projects
+SemSim - Question Similarity Intelligence (Quora Duplicate Detection) | GitHub
+• Built a complete ML pipeline including text preprocessing, feature engineering, Bag-of-Words and Word2Vec embeddings, and transformer models.
+• Achieved 90% accuracy using a Cross-Encoder model and implemented a two-stage retrieval architecture (SBERT + FAISS + CrossEncoder).
+• Deployed the system using a FastAPI backend enabling real-time similarity prediction and FAQ retrieval.
+
+AgentForge - Local-First AI Agent Evaluation Platform | GitHub
+• Built a framework-agnostic AI agent evaluation platform supporting 9 providers (OpenAI, Anthropic, Ollama, LangChain, etc.) with 12 built-in metrics.
+• Designed modular architecture with pluggable adapters, datasets, and judges for single-agent, multi-agent, and workflow evaluations.
+• Developed Python SDK, CLI, and Streamlit UI with leaderboards, drill-down analytics, and observability traces.
+
+Spec2Code AI – Multi-Agent Code Generation Platform | GitHub
+• Architected a full-stack platform that converts natural-language specs into production-ready codebases using a 6-agent LangGraph DAG workflow (Planner, Architect, Coder, Reviewer, Documentation).
+• Built a FastAPI + PostgreSQL backend with SQLAlchemy and real-time SSE streaming of agent execution states to a React 18 + TypeScript frontend.
+• Designed a provider-agnostic LLM factory supporting OpenAI, Groq, Gemini, and Ollama, with JWT-based stateless authentication.
+
+Certifications
+Machine Learning Specialization — DeepLearning.AI, Stanford University (Dr. Andrew Ng)
+The Complete Full-Stack Web Development Bootcamp — Udemy (Dr. Angela Yu)
+
+Achievements
+• Secured 1st place at Breach 2026 FinTech Hackathon among 700+ participants.
+• Shortlisted twice (2024, 2025) for Smart India Hackathon from university among 500+ students.
+• Solved 200+ problems on LeetCode.
+• Top 10 finish at Ingenious Hackathon 7.0 — built an AI/ML career-intelligence layer with skill-gap prediction and personalized recommendations.
+• First Runner-Up in a workshop competition on Transformers and RAG — built Virtual Legal Advisor, an AI-powered forensic investigation and legal analysis system.
